@@ -42,5 +42,7 @@
     </div>
    
 </form>
+<!--show errors if any to user-->
+@include('errors.list')
 
 @stop

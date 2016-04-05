@@ -18,8 +18,10 @@
 <div class="form-group">
     {!! Form::label('type_article', 'Type:') !!}
     {!! Form::text('type_article', null, ['class'=>'form-control']) !!}
-
-
+</div>
+<div class="form-group">
+    {!! Form::label('taglist', 'Tags:') !!}
+    {!! Form::select('taglist[]', $tags, null, ['class'=>'form-control', 'multiple'])!!}
 </div>
  <div class="form-group">
     {!! Form::submit($submitButtonText, ['class'=>'btn btn-primary form-control']) !!}

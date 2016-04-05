@@ -82,12 +82,10 @@
                    </div>
                 </div>
                 <div class="panel-footer">
-                    <!--<button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>-->  
                     <button type="submit" class="btn btn-success">Ajouter</button>
-                </div>
-        
+                </div>       
         </div>
     </div>
 </form>
-
+@include('errors.list')
 @stop

@@ -3,21 +3,23 @@
 namespace App\Http\Controllers;
 
 use App\Article;
-use Illuminate\Http\Request;
+use App\Tag;
 
-use App\Http\Requests;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ArticleRequest;
-//use Illuminate\Support\Facades\Request
 
 class ArticlesController extends Controller
 {
+    /**
+     * Create a new article controller instance
+     */
     public function __construct(){
         $this->middleware('auth', ['only'=>'create']);
         
     }
     /**
+     * Show all articles
      * 
      * @return string all articles
      */
@@ -26,46 +28,89 @@ class ArticlesController extends Controller
         return view('articles.index', compact('articles'));
     }
    /**
+    * Show only one article
     * 
     * @param type $id
     * @return string one article
     */
     public function show($id) {
         $article = Article::findOrFail($id);
-        return view('articles.show', compact('article'));
-        
+        return view('articles.show', compact('article'));     
     }
     /**
+     * Show the page to create new article
      * 
-     * @return type
+     * @return Response
      */
     
     public function create() {
-        return view('articles.create');
+        $tags = Tag::lists('tag_name', 'id');
+        return view('articles.create', compact('tags'));
     }
     
     /**
+     * Save a new article
+     * 
      * store new article in the database
-     * @return type
+     * @param ArticleRaquest $request
+     * @return Response
      */
     public function store(ArticleRequest $request) {
-       
-        $article = new Article($request->all());
-        Auth::user()->articles()->save($article);
-       $request['url_image'] = 'default/url/path';
-      // Article::create($request->all());
-       return redirect('articles');
+        
+        $this->createArticle($request);
+        flash()->success('Votre don a été bien enregistré');
+        return redirect('articles');
     }
     
+    /**
+     * Edit an existing article
+     * 
+     * @param Article $article
+     * @return Response
+     */
     public function edit($id) {
         $article = Article::findOrFail($id);
-        return view('articles.edit', compact('article'));
+        $tags = Tag::lists('tag_name', 'id');
+        return view('articles.edit', compact('article', 'tags'));
     }
     
+    /**
+     * Update an article
+     * 
+     * @param ArticleRequest $request
+     * @param \App\Http\Requests\ArticleRequest $request
+     * @return Response
+     */
     public function update($id, ArticleRequest $request) {
         $article = Article::findOrFail($id);
         $article->update($request->all());
+        $this->syncTags($article, $request->input('taglist'));
         return redirect('articles');
+    }
+    
+    /**
+     * Sync up the list of tags in the database
+     * 
+     * @param \App\Http\Requests\ArticleRequest $request
+     * @param \App\Article $article
+     */
+    private function syncTags(Article $article, Array $tags){
+        
+        $article->tags()->sync($tags);
+    }
+    
+    /**
+     * Create new article
+     * 
+     * @param \App\Http\Requests\ArticleRequest $request
+     * @return article
+     */
+    private function createArticle(ArticleRequest $request){
+               
+        $request['url_image'] = 'default/url/path';
+        $article = Auth::user()->articles()->create($request->all());
+        $this->syncTags($article, $request->input('taglist'));
+        return $article;
     }
   
 }
