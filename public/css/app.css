@@ -17,7 +17,11 @@ html {
 body {
   margin: 0;
 }
-
+/*css wg*/
+ #menuHamburger
+  {
+	  display:none;
+  }
 article,
 aside,
 details,
@@ -8117,6 +8121,15 @@ button.close {
   td.visible-xs {
     display: table-cell !important;
   }
+  #menuHamburger
+  {
+	  display:block;
+  }
+  .navbar-right
+  {
+	  margin-top:60px;
+  }
+  #menuNormal{display:none;}
 }
 
 @media (max-width: 767px) {

@@ -39,4 +39,7 @@
         </div>
 
     </body>
+	<?php 
+                 require_once app_path()."/includes/footerBar.blade.php";
+		?>
 </html>
