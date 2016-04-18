@@ -15,7 +15,7 @@
 	              <object type="application/x-shockwave-flash" 
 			width="200" height="20" id="dewplayer" name="dewplayer">
 			<param name="wmode" value="transparent" />
-			rrrrrrrrr
+			
 			<param name="flashvars" value="mp3=" />
 		</object>
 		<div style="padding-top: 10px">

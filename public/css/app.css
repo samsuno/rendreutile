@@ -5529,6 +5529,16 @@ tbody.collapse.in {
   .navbar-nav .open .dropdown-menu > li > a:focus {
     background-image: none;
   }
+  #menuHamburger
+  {
+	  display:block;
+  }
+  .navbar-right
+  {
+	  margin-top:60px;
+  }
+  #menuNormal{display:none;}
+ 
 }
 
 @media (min-width: 768px) {
@@ -8121,22 +8131,15 @@ button.close {
   td.visible-xs {
     display: table-cell !important;
   }
-  #menuHamburger
-  {
-	  display:block;
-  }
-  .navbar-right
-  {
-	  margin-top:60px;
-  }
-  #menuNormal{display:none;}
+  
 }
 
 @media (max-width: 767px) {
   .visible-xs-block {
     display: block !important;
   }
-}
+  
+ }
 
 @media (max-width: 767px) {
   .visible-xs-inline {

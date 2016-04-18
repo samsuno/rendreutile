@@ -11,7 +11,9 @@ $var = url('auth/logout');
     ?>
     <div class="navbar-right">
 	
-	<!-- Affichage mobile regroupé -->
+	<div style="text-align:center">
+	
+		<!-- Affichage mobile regroupé -->
 	<div id="menuHamburger">
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#monMenuMobile">
@@ -36,8 +38,19 @@ $var = url('auth/logout');
 					</ul>			
 				</div><!-- /.navbar-collapse -->
 		</div>
-	<div style="text-align:center">
+	
+	<!--les boutons réseaux sociaux -->
 	<div class="btn-group">
+	<!--Facebook-->
+	 <a class="btn btn-social-icon btn-facebook"> <span class="fa fa-facebook fa-2x"></span>	</a>
+	 <a class="btn btn-social-icon btn-twitter">  <span class="fa fa-twitter fa-2x"></span></a>
+	 <a class="btn btn-social-icon btn-linkedin">  <span class="fa fa-linkedin fa-2x"></span></a>
+	</div> <br/> 
+		
+	
+	<div class="btn-group">
+	
+		
         <a href="<?php echo url('auth/login') ?>"><button class="btn btn-success navbar-btn " ><strong>Connexion</strong></button></a>
 		<a href="<?php echo url('auth/register') ?>"><button class ="btn btn-primary navbar-btn"   ><strong> Créer un compte</strong></button></a>
 	</div>	
@@ -59,15 +72,7 @@ $var = url('auth/logout');
         echo '<a href="'.url('auth/logout').'"><button class="btn btn-danger navbar-btn navbar-right">Déconnexion</button></a>';
     }
     ?>
-		
-			
-			
-				<!-- jQuery (nécessaires pour les plugins JavaScript de bootstrap) -->
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-			<!-- Inclure tous les plugins compilés (ci-dessous), ou inclure des fichiers individuels si besoin -->
-			 <!-- Bootsrap JS 3.3.4 -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-			
+
     </div>
 </nav>
 
