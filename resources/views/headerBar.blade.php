@@ -45,6 +45,7 @@ $var = url('auth/logout');
 	 <a class="btn btn-social-icon btn-facebook"> <span class="fa fa-facebook fa-2x"></span>	</a>
 	 <a class="btn btn-social-icon btn-twitter">  <span class="fa fa-twitter fa-2x"></span></a>
 	 <a class="btn btn-social-icon btn-linkedin">  <span class="fa fa-linkedin fa-2x"></span></a>
+	 <a class="btn btn-social-icon btn-google-plus">  <span class="fa fa-google-plus fa-2x"></span></a>
 	</div> <br/> 
 		
 	

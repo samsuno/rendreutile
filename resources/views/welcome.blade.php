@@ -27,9 +27,9 @@
 		
     </head>
     <body>
-	<?php 
-                 require_once app_path()."/includes/headerBar.blade.php";
-		?>
+	
+            @include('headerBar')    
+		
   <div class="container">
 	<div class="row">
 	<style>
@@ -38,9 +38,9 @@
 		margin-top:20px;
 	}
 	</style>
-		<?php 
-                 require_once app_path()."/includes/menu.blade.php";
-		?>
+		
+               @include('menu')
+		
 		<div class="col-xs-8">
             <div class="content">
 			
@@ -57,7 +57,7 @@
 	</div>
  </div>
     </body>
-	<?php 
-                 require_once app_path()."/includes/footerBar.blade.php";
-		?>
+	
+           @include('footerBar')      
+		
 </html>
