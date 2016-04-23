@@ -60,10 +60,25 @@ $var = url('auth/logout');
 	</div>	
 	  <form class="navbar-form" role="search">
 			<div class="input-group add-on">
-			  <input type="text" class="form-control" placeholder="Rechercher sur le site" name="srch-term" id="srch-term">
+			 <script>
+		  (function() {
+			var cx = '015372410067233616151:zet-feily-c';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
+		  })();
+		</script>
+			  <input type="text" class="form-control" placeholder="Rechercher sur le site" name="q" id="srch-term"><!--srch-term-->
 			  <div class="input-group-btn">
-				<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+			<button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+				
 			  </div>
+			  
+			<gcse:searchresults-only></gcse:search>
+
 			</div>
 	</form>
 	  

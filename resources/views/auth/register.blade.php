@@ -82,8 +82,15 @@
                    </div>
                 </div>
                 <div class="panel-footer">
-                    <button type="submit" class="btn btn-success">Ajouter</button>
+				<div class="row">
+					<div class="col-xs-3">
+			
+					</div>
+					<div class="col-xs-6">
+                    <button type="submit" class="btn btn-primary" style="width:100%">S'inscrire</button>
+					</div>  
                 </div>       
+				</div> 
         </div>
     </div>
 </form>

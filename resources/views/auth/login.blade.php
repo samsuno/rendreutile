@@ -14,28 +14,32 @@
             <div class="form-group">
                 <label for="email" class="col-sm-2 control-label">Email</label>
                 <div class="col-sm-9" >
-                    <input class="form-control" type="email" name="email" value="{{ old('email') }}">
+                    <input class="form-control" type="email" name="email" value="{{ old('email') }}"  placeholder="Email ou Pseudo">
                 </div>
                 
             </div>
 
             <div class="form-group">
-                <label for="password" class="col-sm-2 control-label">Password</label>
+                <label for="password" class="col-sm-2 control-label">Mot de passe</label>
                 <div class="col-sm-9">
-                     <input  class="form-control" type="password" name="password" id="password">
+                     <input  class="form-control" type="password" name="password" id="password" placeholder="Mot de passe">
                 </div>
                
             </div>
         </div>
         <div class="panel-footer">
-            <div>
-                <input type="checkbox" name="remember"> Remember Me
-            </div>
-
-            <div>
-                <button type="submit">Login</button>
-            </div>
-        </div>
+		
+		<div class="row">
+		  <div class="col-xs-2">
+			
+		  </div>
+		  <div class="col-xs-3">
+			<input type="checkbox" name="remember"> Se souvenir de moi
+		  </div>
+		  <div class="col-xs-4">
+			<button type="submit" class="btn btn-primary">Se connecter</button>
+		  </div>
+		</div>
             
        
        

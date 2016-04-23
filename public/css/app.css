@@ -27,6 +27,13 @@ body {
 			{
 				margin-top:20px;
 			}
+			
+/*Cacher le bouton blanc de google et pousser l'ensemble vers la droite*/
+#___gcse_0
+{
+	visibility:hidden;
+	margin-right:-30px;
+}
 /* 	CSS pour aligner le menu du header réservé pour le mobile, en commentaire car je trouve plus joli non aligné
 #monMenuMobile
  {
