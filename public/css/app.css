@@ -22,6 +22,27 @@ body {
   {
 	  display:none;
   }
+  /*Css pour caler menu par rapport au contenu*/
+  .menu
+			{
+				margin-top:20px;
+			}
+/* 	CSS pour aligner le menu du header réservé pour le mobile, en commentaire car je trouve plus joli non aligné
+#monMenuMobile
+ {
+ text-align:left!important;
+
+ }
+ #monMenuMobile li a 
+ {
+	  padding-left:40%;
+ }*/
+ 
+  #monMenuMobile li a:hover
+ {
+	  background:#E7E7E7;
+	  font-weight:bold;
+ }
 article,
 aside,
 details,

@@ -27,6 +27,8 @@ $var = url('auth/logout');
 
 				<!-- Recueil les liens nav, les formulaires et d'autres contenus pour basculer -->
 				<div class="collapse navbar-collapse dropdown" id="monMenuMobile">
+				
+				
 				  <ul class="nav navbar-nav">
 								<li role="presentation" class="active"><a href="#">Accueil</a></li>
                                 <li role="presentation"><a href="{{URL::to('./articles')}}">Objets a récupérer</a></li>
@@ -37,6 +39,7 @@ $var = url('auth/logout');
 					
 					</ul>			
 				</div><!-- /.navbar-collapse -->
+				
 		</div>
 	
 	<!--les boutons réseaux sociaux -->

@@ -19,17 +19,10 @@
         <!--container div-->
         <div class="container">
           <div class="row">
-           <style>
-			.menu
-			{
-				margin-top:20px;
-			}
-			</style>
-		
+          
                  @include("menu");
 		
-
-            <div class="col-xs-9">
+			<div class="col-xs-12 col-md-9">
                 @include('flash::message')
                 @yield('content')
             </div>
