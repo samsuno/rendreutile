@@ -6,10 +6,8 @@ $var = url('auth/logout');
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
     <a class="navbar-brand" href="<?php echo url('/') ?>"><img src='http://rendreutile.fr/Rendre_Utile/logo.jpg' style='width:150px;margin-top:-10px;'/></a>
-    <?php
-    if(!Auth::user()){ //if user is not authenticated
-    ?>
-    <div class="navbar-right">
+    
+	 <div class="navbar-right">
 	
 	<div style="text-align:center">
 	
@@ -52,12 +50,41 @@ $var = url('auth/logout');
 	</div> <br/> 
 		
 	
-	<div class="btn-group">
 	
+   
+	
+	<div class="btn-group">
+	<?php
+    if(!Auth::user()){ //if user is not authenticated
+    ?>
 		
         <a href="<?php echo url('auth/login') ?>"><button class="btn btn-success navbar-btn " ><strong>Connexion</strong></button></a>
 		<a href="<?php echo url('auth/register') ?>"><button class ="btn btn-primary navbar-btn"   ><strong> Créer un compte</strong></button></a>
 	</div>	
+	 <?php
+    }
+    else{ //if user is authenticated
+     
+	 echo '<div class="btn-group"><button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"   aria-expanded="false">'.Auth::user()->email.'<span class="caret"></span><span class="sr-only">Toggle Dropdown</span></button>';
+							
+		?>
+				<ul class="dropdown-menu">
+                                <li><a href="#">Mon compte</a></li>
+                                <li><a href="#">Mes dons</a></li>
+                                <li><a href="#">Mes demandes en cours </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href=" <?php echo url('auth/logout') ?>"> Me déconnecter</a></li>
+                            </ul>
+							</div>
+	<?php
+   }
+    ?>
+	
+	
+	  
+	  
+	  </div>
+	  
 	  <form class="navbar-form" role="search">
 			<div class="input-group add-on">
 			 <script>
@@ -81,16 +108,9 @@ $var = url('auth/logout');
 
 			</div>
 	</form>
-	  
-	  </div>
    </div>
 
-    <?php
-    }
-    else{ //if user is authenticated
-        echo '<a href="'.url('auth/logout').'"><button class="btn btn-danger navbar-btn navbar-right">Déconnexion</button></a>';
-    }
-    ?>
+   
 
     </div>
 </nav>
